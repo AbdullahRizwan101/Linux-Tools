@@ -22,7 +22,7 @@ def scan(ip):
     arp_request_broadcast = broadcast/arp_request
 
     # boradcasting packet and saving only answered responses
-    answered_list = scapy.srp(arp_request_broadcast,timeout=1,verbose=False)[0]
+    answered_list = scapy.srp(arp_request_broadcast,timeout=1,verbose=False)[0] 
     client_list = [] # Making List of scanned clients
     for element in answered_list:
         client_dict = {'ip':element[1].psrc,'mac':element[1].hwsrc} #dictionary with scanned ip & MAC of clients
