@@ -32,7 +32,7 @@ curr_mac = current_mac(values.interface)
 print("[+] Current MAC Address is : "+str(curr_mac))
 change_mac(values.interface,values.mac)
 curr_mac = current_mac(values.interface)
-
+ 
 if curr_mac == values.mac:
     print("[+] Mac address successfully changed to : "+str(curr_mac))
 
@@ -43,3 +43,4 @@ if curr_mac == values.mac:
 
 
 
+   
