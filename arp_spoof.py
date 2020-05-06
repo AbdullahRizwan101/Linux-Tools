@@ -50,6 +50,6 @@ try :
         sys.stdout.flush() # do not flush the buffer , no needed for python3 
         time.sleep(2)
 except KeyboardInterrupt:
-    print("[-] Detected Ctrl+C , Quiting")
+    print("[-] Detected Ctrl+C , Quiting")   
     restore(value.target,value.gateway)
     restore(value.gateway,value.target)   
